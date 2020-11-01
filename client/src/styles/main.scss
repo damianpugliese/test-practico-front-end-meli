@@ -1,0 +1,10 @@
+@import './partials/variables';
+@import './partials/reset';
+
+.container {
+    background-color: $primary;
+}
+
+.image {
+    width: 100%;
+}
