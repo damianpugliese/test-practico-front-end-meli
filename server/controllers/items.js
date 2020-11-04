@@ -1,6 +1,6 @@
 const axios = require('axios');
 const { author, apiUrlBase, apiRegion } = require('../utils/utils');
-const { itemsBuilder, getCategories, itemBuilder } = require('../helpers/helpers');
+const { getCategoriesFromFilters, getCurrencies, itemBuilder } = require('../helpers/helpers');
 
 const searchItems = async (req, res) => {
     const { q } = req.query;
@@ -9,15 +9,17 @@ const searchItems = async (req, res) => {
 
     try {
 
-        const response = await axios(`${apiUrlBase}/${apiRegion}/search?q=${q}&limit=4`);
+        const searchResponse = await axios(`${apiUrlBase}/${apiRegion}/search?q=${q}&limit=4`);
 
-        if (response.status !== 200) return res.status(response.status).json({ msg: 'Algo salió mal. Intentalo de nuevo!' });
+        if (searchResponse.status !== 200) return res.status(searchResponse.status).json({ msg: 'Algo salió mal. Intentalo de nuevo!' });
 
-        const { results, filters } = response.data;
+        const { results, filters } = searchResponse.data;
 
-        const items = itemsBuilder(results);
+        const currencies = await getCurrencies();
 
-        const categories = getCategories(filters);
+        const items = results.map(item => itemBuilder(item, currencies));
+
+        const categories = getCategoriesFromFilters(filters);
 
         const data = {
             author,
@@ -45,15 +47,29 @@ const getItemDetail = async (req, res) => {
 
         if (responseItemDescription.status !== 200) return res.status(responseItemDescription.status).json({ msg: 'Algo salió mal. Intentalo de nuevo!' });
 
+        const currenciesResponse = await axios(`${apiUrlBase}/currencies`);
+
+        if (currenciesResponse.status !== 200) return res.status(currenciesResponse.status).json({ msg: 'Algo salió mal. Intentalo de nuevo!' });
+
         const itemData = responseItem.data;
-
+        
         const itemDescription = responseItemDescription.data;
+        
+        const currencies = currenciesResponse.data;
 
-        const item = itemBuilder(itemData, itemDescription);
+        const item = itemBuilder(itemData, currencies);
+
+        item.sold_quantity = itemData.sold_quantity;
+        item.description = itemDescription.plain_text;
+
+        const categoriesResponse = await axios(`${apiUrlBase}/categories/${itemData.category_id}`);
+
+        const categories = categoriesResponse.data.path_from_root;
 
         const data = {
             author,
-            item
+            item,
+            categories
         }
 
         res.status(200).send(data);
