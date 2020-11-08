@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
-import axios from 'axios';
 import styles from '../Header/Header.scss';
 import logo from '../../assets/images/Logo_ML@2x.png.png';
+import logoMobile from '../../assets/images/Logo_ML.png';
 import buttonImage from '../../assets/images/ic_Search@2x.png.png';
+import buttonImageMobile from '../../assets/images/ic_Search.png';
 import { Link, useHistory } from 'react-router-dom';
 
 const Header = () => {
@@ -31,22 +32,30 @@ const Header = () => {
         <header className={styles.header}>
             <nav className={styles.nav}>
                 <Link to='/'>
-                    <img src={logo} alt='logo' className={styles.logo}/>
+                    <picture className={styles.logoContainer}>
+                        <source media="(max-width: 768px)" srcset={logoMobile} className={styles.logoMobile} />
+                        <source media="(min-width: 769px)" srcset={logo} className={styles.logo} />
+                        <img src={logo} size='max' alt='logo' className={styles.logo} />
+                    </picture>
                 </Link>
                 <form onSubmit={handleSubmit} className={styles.form}>
-                    <input 
-                        type='text' 
-                        onChange={handleChange} 
-                        value={inputValue} 
-                        placeholder='Nunca dejes de buscar' 
-                        className={styles.input} 
+                    <input
+                        type='text'
+                        onChange={handleChange}
+                        value={inputValue}
+                        placeholder='Nunca dejes de buscar'
+                        className={styles.input}
                         maxLength={120}
                         autoComplete='off'
                         aria-label='Ingresá lo que quieras encontrar'
                         ref={inputRef}
                     />
                     <button type='submit' className={styles.buttonSubmit} aria-label='Buscar'>
-                        <img src={buttonImage} alt='Buscar' className={styles.buttonImage} />
+                        <picture className={styles.buttonImageContainer}>
+                            <source media="(max-width: 768px)" srcset={buttonImageMobile} className={styles.buttonImageMobile} />
+                            <source media="(min-width: 769px)" srcset={buttonImage} className={styles.buttonImage} />
+                            <img src={buttonImage} size='max' alt='buscar' className={styles.buttonImage} />
+                        </picture>
                     </button>
                 </form>
             </nav>

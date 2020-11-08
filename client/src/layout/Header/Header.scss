@@ -1,20 +1,30 @@
 @import "../../styles/partials/colors";
+@import "../../styles/partials/variables";
 
 .header {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
     height: 56px;
     background-color: $yellow;
 
     .nav {
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex: 1;
         max-width: 1200px;
+        margin-left: $simple-padding;
+        margin-right: $simple-padding;
 
-        .logo {
-            height: 39px;
+        .logoContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .logo {
+                height: 39px;
+            }
         }
 
         .form {
@@ -54,13 +64,32 @@
                 border-bottom-right-radius: 3px;
             }
 
-            .buttonImage {
-                width: 20px;
-                color: $black;
+            .buttonImageContainer {
+                margin-top: 5px;
+                
+                .buttonImage {
+                    width: 20px;
+                    color: $black;
+                }
             }
+        }
+    }
+}
 
+@media (max-width: 800px) {
+    .logo {
+        height: 30px !important;
+    }
+
+    .form {
+        margin-left: 15px !important;
+
+        .input {
+            font-size: 16px !important;
         }
 
+        .input::placeholder {
+            font-size: 16px !important;
+        }
     }
-    
 }

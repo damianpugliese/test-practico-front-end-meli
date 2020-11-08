@@ -1,18 +1,24 @@
 @import "../../styles/partials/colors";
+@import "../../styles/partials/variables";
 
 .searchResultsContainer {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100%;
+    padding-left: $simple-padding;
+    padding-right: $simple-padding;
     flex: 1;
-    max-width: 1200px;
 
     .resultsCard {
         flex-direction: column;
         margin-bottom: 46px;
+        max-width: 1200px;
+        margin-left: $simple-padding !important;
+        margin-right: $simple-padding;
     }
 
-    .resultsCard .marginTop {
+    .resultsCard.marginTop {
         margin-top: 14px;
     }
 
@@ -20,6 +26,9 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding-right: $simple-padding;
     }
     
 }
+
+

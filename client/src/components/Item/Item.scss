@@ -27,14 +27,14 @@
     .itemImage {
         height: 180px;
     }
-
 }
 
 .itemContent {
     display: flex;
+    flex-wrap: wrap;
     flex: 1;
     padding-top: $simple-padding;
-    padding-bottom: $double-padding;
+    padding-bottom: $simple-padding;
 
     .priceAndTitleContainer {
         display: flex;
@@ -55,20 +55,17 @@
                 margin-left: 10px;
                 height: 20px;
             }
-
         }
 
-    }
-
-    .itemTitle {
-        font-size: 18px;
-        color: $black;
+        .itemTitle {
+            font-size: 18px;
+            color: $black;
+        }
     }
 
     .addressContainer {
         display: flex;
         justify-content: center;
-        flex: 1;
         padding-top: 8px;
 
         .itemAddress {
@@ -77,7 +74,11 @@
             font-size: 12px;
             color: $grey;
         }
-
     }
-    
+}
+
+@media (max-width: 768px) {
+    .priceAndTitleContainer {
+        width: 100% !important;
+    }
 }
