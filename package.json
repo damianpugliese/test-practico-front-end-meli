@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Test Práctico Front-End MELI",
   "main": "server.js",
+  "engines": {
+    "node": "12.16.2"
+  },
   "scripts": {
     "server-install": "npm install --prefix server",
     "client-install": "npm install --prefix client",
