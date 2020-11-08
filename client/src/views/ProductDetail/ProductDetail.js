@@ -8,11 +8,12 @@ import BreadCrumb from '../../components/BreadCrumb/BreadCrumb';
 import NotFound from '../../components/NotFound/NotFound';
 import Error from '../../components/Error/Error';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
+import { API_URL } from '../../config/config';
 
 const ProductDetail = () => {
 
     const { id } = useParams();
-    const location = useLocation()
+    const location = useLocation();
 
     const categories = location.state && location.state.categories;
 
@@ -25,7 +26,7 @@ const ProductDetail = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios(`http://localhost:5000/api/items/${id}`)
+        axios(`${API_URL}/api/items/${id}`)
             .then(searchResponse => {
                 const { item } = searchResponse.data;
                 setResults(prevState => ({
@@ -35,7 +36,7 @@ const ProductDetail = () => {
                 }));
                 if (!categories || categories && categories.length === 0) {
                     const categoryId = item.category_id;
-                    axios(`http://localhost:5000/api/categories/${categoryId}`)
+                    axios(`${API_URL}/api/categories/${categoryId}`)
                         .then(categoriesResponse => {
                             const { categories } = categoriesResponse.data;
                             setResults(prevState => ({

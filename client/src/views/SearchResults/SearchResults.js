@@ -8,6 +8,7 @@ import BreadCrumb from '../../components/BreadCrumb/BreadCrumb';
 import Item from '../../components/Item/Item';
 import NotFound from '../../components/NotFound/NotFound';
 import Error from '../../components/Error/Error';
+import { API_URL } from '../../config/config';
 
 const SearchResults = () => {
 
@@ -22,7 +23,7 @@ const SearchResults = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios(`http://localhost:5000/api/items?q=${query}`)
+        axios(`${API_URL}/api/items?q=${query}`)
             .then(searchResponse => {
                 const { items, categories } = searchResponse.data;
                 setResults({
