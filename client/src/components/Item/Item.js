@@ -6,7 +6,7 @@ import freeShippingImageMobile from '../../assets/images/ic_shipping.png'
 
 const Item = ({ item, last, categories }) => {
     return (
-        <li className={`${styles.itemListItem} ${!last ? styles.borderBottom : ''}`}>
+        <li className={`${styles.itemList} ${!last ? styles.borderBottom : ''}`}>
             <div className={styles.itemImageContainer}>
                 <Link to={{
                     pathname: `/items/${item.id}`,

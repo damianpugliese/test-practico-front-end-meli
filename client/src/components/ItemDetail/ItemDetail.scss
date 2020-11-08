@@ -1,72 +1,77 @@
-@import '../../styles/partials/variables';
-@import '../../styles/partials/colors';
+@import "../../styles/partials/variables";
+@import "../../styles/partials/colors";
 
-.itemDatailContainer {
+.itemDetailContainer {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     padding: $double-padding;
 
-    .itemDetailContentLeft {
+    .productImageContainer {
         display: flex;
-        flex-direction: column;
         flex: 2;
-        max-width: 680px;
+        max-width: 680px !important;
+        margin-right: $double-padding;
+        order: 1;
+        width: -webkit-fill-available;
 
         .productImage {
-            width: 100%;
+            max-width: 680px;
             border-radius: 4px;
             margin-bottom: $double-padding;
+            width: -webkit-fill-available;
         }
-    
-        .itemDetailDescription {
-            display: flex;
-            flex-direction: column;
-    
-            .itemDetailDescriptionTitle {
-                font-size: 28px;
-                font-weight: 500;
-                margin-bottom: $double-padding;
-            }
+    }
 
-            .itemDetailDescriptionParagraph {
-                font-size: 16px;
-                color: $grey
-            }
-    
+    .itemDetailDescription {
+        display: flex;
+        flex-direction: column;
+        max-width: 680px;
+        order: 3;
+
+        .itemDetailDescriptionTitle {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: $double-padding;
         }
 
+        .itemDetailDescriptionParagraph {
+            font-size: 16px;
+            color: $grey;
+        }
     }
 
     .itemDetailContentRight {
         display: flex;
         flex: 1;
         justify-content: flex-end;
+        order: 2;
+        margin-bottom: $double-padding;
 
         .itemDetailContentRightWraper {
-            max-width: 250px;
+            max-width: 300px;
 
             .conditionParagraph {
                 margin-bottom: $simple-padding;
                 font-size: 14px;
             }
-    
+
             .itemDatailTitle {
                 font-size: 24px;
                 margin-bottom: $double-padding;
             }
-    
+
             .priceContainer {
                 display: flex;
                 align-items: center;
                 font-size: 46px;
                 margin-bottom: $double-padding;
-    
+
                 .priceCurrency {
                     margin-right: 4px;
                 }
-    
             }
-    
+
             .buyButton {
                 display: flex;
                 align-items: center;
@@ -81,13 +86,16 @@
                 font-size: 16px;
                 cursor: pointer;
             }
-    
+
             .buyButton:hover {
                 background-color: #1771f8;
             }
-            
         }
-
     }
+}
 
+@media (max-width: 800px) {
+    .itemDetailContentRight {
+        justify-content: flex-start !important;
+    }
 }

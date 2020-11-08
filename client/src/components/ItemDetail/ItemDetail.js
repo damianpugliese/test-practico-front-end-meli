@@ -3,17 +3,17 @@ import styles from './ItemDetail.scss';
 
 const ItemDetail = ({ item }) => {
     return (
-        <div className={styles.itemDatailContainer}>
-            <div className={styles.itemDetailContentLeft}>
+        <div className={styles.itemDetailContainer}>
+            <div className={styles.productImageContainer}>
                 <img src={item.picture} alt='imagen-del-producto' className={styles.productImage} />
-                <div className={styles.itemDetailDescription}>
-                    <h3 className={styles.itemDetailDescriptionTitle}>
-                        Descripción de producto
+            </div>
+            <div className={styles.itemDetailDescription}>
+                <h3 className={styles.itemDetailDescriptionTitle}>
+                    Descripción de producto
                     </h3>
-                    <p className={styles.itemDetailDescriptionParagraph}>
-                        {item.description}
-                    </p>
-                </div>
+                <p className={styles.itemDetailDescriptionParagraph}>
+                    {item.description}
+                </p>
             </div>
             <div className={styles.itemDetailContentRight}>
                 <div className={styles.itemDetailContentRightWraper}>

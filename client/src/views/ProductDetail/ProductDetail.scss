@@ -1,13 +1,18 @@
+@import "../../styles/partials/variables";
+
 .productDetailContainer {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     flex: 1;
-    max-width: 1200px;
+    padding-left: $simple-padding;
+    padding-right: $simple-padding;
 
     .productDetailCard {
         flex-direction: column;
         margin-bottom: 46px;
+        max-width: 1200px;
     }
 
 }
