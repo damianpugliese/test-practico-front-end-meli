@@ -1,24 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import Main from '../../layout/Main/Main';
 import styles from '../../styles/main.scss';
-import image from '../../assets/images/image.jpg';
-import axios from 'axios';
+import {
+    Switch,
+    Route
+} from "react-router-dom";
+import Header from '../../layout/Header/Header';
+import SearchBox from '../../views/SearchBox/SearchBox';
+import SearchResults from '../../views/SearchResults/SearchResults';
+import ProductDetail from '../../views/ProductDetail/ProductDetail';
 
 const App = () => {
 
-    useEffect(() => {
-        axios('http://localhost:5000/api/items?q=Apple Iphone')
-            .then(res => console.log(res.data))
-            .catch(err => console.log(err.response.data.msg))
-
-        axios('http://localhost:5000/api/items/MLA879223622')
-            .then(res => console.log(res.data))
-            .catch(err => console.log(err.response.data.msg))
-    })
-
     return (
-        <div className={styles.container}>
-            <h1>My React App!</h1>
-            <img src={image} className={styles.image} />
+        <div className={styles.App}>
+            <Header />
+            <Main>
+                <Switch>
+                    <Route exact path='/' component={SearchBox} />
+                    <Route exact path='/items/:id' component={ProductDetail} />
+                    <Route exact path='/items' component={SearchResults} />
+                </Switch>
+            </Main>
         </div>
     )
 }

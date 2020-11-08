@@ -3,12 +3,6 @@ const author = {
     lastname: 'Pugliese'
 }
 
-const apiUrlBase = 'https://api.mercadolibre.com';
-
-const apiRegion = 'sites/MLA'
-
 module.exports = {
-    author,
-    apiUrlBase,
-    apiRegion
+    author
 }

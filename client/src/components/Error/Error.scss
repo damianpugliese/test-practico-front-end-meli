@@ -1,0 +1,15 @@
+@import '../../styles/partials/colors';
+
+.errorContainer {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .errorMessage {
+        font-size: 36px;
+        color: $dark-grey;
+    }
+
+} 

@@ -1,0 +1,93 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/colors';
+
+.itemDatailContainer {
+    display: flex;
+    width: 100%;
+    padding: $double-padding;
+
+    .itemDetailContentLeft {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        max-width: 680px;
+
+        .productImage {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: $double-padding;
+        }
+    
+        .itemDetailDescription {
+            display: flex;
+            flex-direction: column;
+    
+            .itemDetailDescriptionTitle {
+                font-size: 28px;
+                font-weight: 500;
+                margin-bottom: $double-padding;
+            }
+
+            .itemDetailDescriptionParagraph {
+                font-size: 16px;
+                color: $grey
+            }
+    
+        }
+
+    }
+
+    .itemDetailContentRight {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+
+        .itemDetailContentRightWraper {
+            max-width: 250px;
+
+            .conditionParagraph {
+                margin-bottom: $simple-padding;
+                font-size: 14px;
+            }
+    
+            .itemDatailTitle {
+                font-size: 24px;
+                margin-bottom: $double-padding;
+            }
+    
+            .priceContainer {
+                display: flex;
+                align-items: center;
+                font-size: 46px;
+                margin-bottom: $double-padding;
+    
+                .priceCurrency {
+                    margin-right: 4px;
+                }
+    
+            }
+    
+            .buyButton {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                outline: none;
+                height: 40px;
+                width: 100%;
+                background-color: $blue;
+                color: #fff;
+                border-radius: 4px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+    
+            .buyButton:hover {
+                background-color: #1771f8;
+            }
+            
+        }
+
+    }
+
+}

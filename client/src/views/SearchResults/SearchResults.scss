@@ -1,0 +1,25 @@
+@import "../../styles/partials/colors";
+
+.searchResultsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    max-width: 1200px;
+
+    .resultsCard {
+        flex-direction: column;
+        margin-bottom: 46px;
+    }
+
+    .resultsCard .marginTop {
+        margin-top: 14px;
+    }
+
+    .itemList {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+}

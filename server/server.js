@@ -15,6 +15,7 @@ app.use(cors());
 
 // Routes
 app.use('/api/items', require('./routes/items'));
+app.use('/api/categories', require('./routes/categories'));
 
 // Serving static files in production
 if (process.env.NODE_ENV === 'production') {

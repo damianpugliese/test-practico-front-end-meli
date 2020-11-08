@@ -1,0 +1,16 @@
+.notFoundCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+
+    .notFoundIcon {
+        margin-right: 35px;
+    }
+
+    .notFoundTitle {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+}

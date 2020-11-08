@@ -1,0 +1,23 @@
+.searchBoxContainer {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    max-width: 1200px;
+
+    .searchBoxCard {
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 46px;
+        font-size: 32px;
+        font-weight: 100;
+
+        .searchBoxTitle {
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+    }
+    
+}
+

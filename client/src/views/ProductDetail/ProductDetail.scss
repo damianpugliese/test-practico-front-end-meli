@@ -1,0 +1,13 @@
+.productDetailContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    max-width: 1200px;
+
+    .productDetailCard {
+        flex-direction: column;
+        margin-bottom: 46px;
+    }
+
+}
