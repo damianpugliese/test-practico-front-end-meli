@@ -26,11 +26,11 @@ npm run client
 
 **Nota:**
 
-El Servidor (Express) corre en http://localhost:5000 y el Cliente (React) en http://localhost:3000 por defecto. 
+El Servidor (Express) corre en `http://localhost:5000` y el Cliente (React) en `http://localhost:3000` por defecto. 
 Si se desea cambiar la configuración de los puertos se puede realizar de la siguiente manera:
-El archivo .env en la carpeta 'server' contiene la variable 'EXPRESS_SERVER_PORT' (puerto en el que corre el server Express, 5000).
-El el archivo webpack.config.js de la carpeta 'client' dentro de las propiedades del objeto de la propiedad 'devServer', hay dos 
-propiedades 'port: 3000' (puerto en el que corre por defecto el Cliente) y 'proxy: { "/api": { target: "http://localhost:5000" } }'
+El archivo `.env` en la carpeta `server` contiene la variable `EXPRESS_SERVER_PORT` (puerto en el que corre el server Express, 5000).
+El el archivo `webpack.config.js` de la carpeta `client` dentro de las propiedades del objeto de la propiedad `devServer`, hay dos 
+propiedades `port: 3000` (puerto en el que corre por defecto el Cliente) y `proxy: { "/api": { target: "http://localhost:5000" } }`
 (url de la Api Express donde hace las peticiones el devServer)
 
 ## Tecnologías
