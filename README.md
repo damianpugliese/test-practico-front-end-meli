@@ -23,7 +23,7 @@ npm run server
 # Correr sólo el Cliente (React) 
 npm run client
 
-Nota:
+**Nota:**
 
 El Servidor (Express) corre en http://localhost:5000 y el Cliente (React) en http://localhost:3000 por defecto. 
 Si se desea cambiar la configuración de los puertos se puede realizar de la siguiente manera:
