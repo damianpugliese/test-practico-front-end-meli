@@ -81,6 +81,7 @@ El proyecto está dividido en dos carpetas: "client" (ReactJS) y "server" (NodeJ
 
 * Agregar Google Analytics.
 * Implementar test unitarios.
+* Creación de variables de entorno para disitntos entornos.
 
 ### Backend
 
@@ -91,7 +92,8 @@ El proyecto está dividido en dos carpetas: "client" (ReactJS) y "server" (NodeJ
 * Se agregó la propiedad 'address' a los items devueltos por '/items?q:query' para poder mostrar la ubicación en la vista 'SearchResults'. 
 
 ###### Pendientes en backend:
-* Implementar test unitarios. 
+* Implementar test unitarios.
+* Creación de variables de entorno para disitntos entornos.
 
 ## Sitio Web Heroku
 
