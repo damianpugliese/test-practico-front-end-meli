@@ -53,6 +53,11 @@ module.exports = {
         new Dotenv()
     ],
     devServer: {
+        proxy: {
+            "/api": {
+                target: "http://localhost:5000"
+            }
+        },
         port: 3000,
         hot: true,
         historyApiFallback: true,
