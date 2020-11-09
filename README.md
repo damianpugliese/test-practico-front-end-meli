@@ -23,7 +23,10 @@ npm run server
 # Correr sólo el Cliente (React) 
 npm run client
 
-# El Servidor (Express) corre en http://localhost:5000 y el Cliente (React) en http://localhost:3000 por defecto. Si se desea cambiar la configuración de las urls se puede acceder a las variables de entorno en los respectivos archivos .env en las carpetas client y server. El archivo .env en la carpeta 'client' contiene la variable 'API_URL' (url del server Express por defecto) y el archivo .env en la carpeta 'server' contiene la variable 'EXPRESS_SERVER_PORT' (puerto en el que corre el server Express). 
+# El Servidor (Express) corre en http://localhost:5000 y el Cliente (React) en http://localhost:3000 por defecto. 
+# Si se desea cambiar la configuración de las urls se puede acceder a las variables de entorno en los respectivos archivos .env en las carpetas client y server. 
+# El archivo .env en la carpeta 'client' contiene la variable 'API_URL' (url del server Express por defecto) y el archivo .env en la carpeta 'server' contiene 
+# la variable 'EXPRESS_SERVER_PORT' (puerto en el que corre el server Express). 
 ```
 
 ## Tecnologías
