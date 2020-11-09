@@ -49,7 +49,6 @@ El proyecto está dividido en dos carpetas: "client" (ReactJS) y "server" (NodeJ
     - assets
       - images
     - components
-    - config
     - layout
     - styles
     - views
