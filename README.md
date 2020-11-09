@@ -1,7 +1,5 @@
 > Test Práctico Front-End Mercado Libre
 
-&nbsp;  
-
 ## Inicio Rápido  
 
 ``` bash
