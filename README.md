@@ -44,6 +44,7 @@ Eproyecto está dividido en dos carpetas: "client" (ReactJS) y "server" (NodeJS)
     - assets
       - images
     - components
+    - config
     - layout
     - styles
     - views
