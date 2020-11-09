@@ -37,7 +37,7 @@ Backend:
 - ExpressJ
 
 ## Estructura
-Eproyecto está dividido en dos carpetas: "client" (ReactJS) y "server" (NodeJS).
+El proyecto está dividido en dos carpetas: "client" (ReactJS) y "server" (NodeJS).
 
 - **client**
   - src
