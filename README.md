@@ -22,6 +22,7 @@ npm run server
 
 # Correr sólo el Cliente (React) 
 npm run client
+```
 
 **Nota:**
 
@@ -31,7 +32,6 @@ El archivo .env en la carpeta 'server' contiene la variable 'EXPRESS_SERVER_PORT
 El el archivo webpack.config.js de la carpeta 'client' dentro de las propiedades del objeto de la propiedad 'devServer', hay dos 
 propiedades 'port: 3000' (puerto en el que corre por defecto el Cliente) y 'proxy: { "/api": { target: "http://localhost:5000" } }'
 (url de la Api Express donde hace las peticiones el devServer)
-```
 
 ## Tecnologías
 Frontend:
