@@ -1,33 +1,6 @@
-@import "../../styles/partials/variables";
+@import '../../styles/partials/mixins';
 
 .searchBoxContainer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex: 1;
-    width: 100%;
-
-    .searchBoxCard {
-        max-width: 1200px;
-        height: 200px;
-        align-items: center;
-        justify-content: center;
-        margin-top: 46px;
-        font-size: 32px;
-        font-weight: 100;
-        margin-left: $simple-padding;
-        margin-right: $simple-padding;
-
-        .searchBoxTitle {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 500;
-        }
-    }
+    @include container-full;
 }
 
-@media (max-width: 800px) {
-    .searchBoxTitle {
-        font-size: 24px !important;
-    }
-}

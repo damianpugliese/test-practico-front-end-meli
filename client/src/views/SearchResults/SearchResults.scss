@@ -1,21 +1,16 @@
 @import "../../styles/partials/colors";
 @import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
 
 .searchResultsContainer {
-    display: flex;
+    @include container-full;
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    padding-left: $simple-padding;
-    padding-right: $simple-padding;
-    flex: 1;
 
     .resultsCard {
         flex-direction: column;
         margin-bottom: 46px;
-        max-width: 1200px;
-        margin-left: $simple-padding !important;
-        margin-right: $simple-padding;
+        max-width: $content-width;
     }
 
     .resultsCard.marginTop {
@@ -24,11 +19,8 @@
 
     .itemList {
         display: flex;
-        flex-direction: column;
         width: 100%;
+        flex-direction: column;
         padding-right: $simple-padding;
     }
-    
 }
-
-

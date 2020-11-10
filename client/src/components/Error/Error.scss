@@ -1,15 +1,22 @@
-@import '../../styles/partials/colors';
+@import "../../styles/partials/mixins";
 
 .errorContainer {
-    display: flex;
-    flex: 1;
-    width: 100%;
-    align-items: center;
+    @include container-full;
     justify-content: center;
 
-    .errorMessage {
-        font-size: 36px;
-        color: $dark-grey;
-    }
+    .errorCard {
+        @include msg-card;
 
-} 
+        .errorTitle {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+
+            @include media(medium) {
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+

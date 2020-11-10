@@ -1,5 +1,6 @@
 @import "../../styles/partials/variables";
 @import "../../styles/partials/colors";
+@import "../../styles/partials/mixins";
 
 .itemDetailContainer {
     display: flex;
@@ -14,6 +15,10 @@
         margin-right: $double-padding;
         order: 1;
         width: -webkit-fill-available;
+
+        @media (max-width: 594px) {
+            margin-right: unset;
+        }
 
         .productImage {
             max-width: 680px;
@@ -33,11 +38,19 @@
             font-size: 28px;
             font-weight: 500;
             margin-bottom: $double-padding;
+
+            @include media(medium) {
+                font-size: 24px
+            }
         }
 
         .itemDetailDescriptionParagraph {
             font-size: 16px;
             color: $grey;
+
+            @include media(medium) {
+                font-size: 14px !important;
+            }
         }
     }
 
@@ -48,6 +61,10 @@
         order: 2;
         margin-bottom: $double-padding;
 
+        @include media(medium) {
+            justify-content: flex-start;
+        }
+
         .itemDetailContentRightWraper {
             max-width: 300px;
 
@@ -56,9 +73,14 @@
                 font-size: 14px;
             }
 
-            .itemDatailTitle {
+            .itemDetailTitle {
                 font-size: 24px;
                 margin-bottom: $double-padding;
+
+                @include media(medium) {
+                    font-size: 24px;
+                    margin-bottom: $simple-padding;
+                }
             }
 
             .priceContainer {
@@ -67,8 +89,17 @@
                 font-size: 46px;
                 margin-bottom: $double-padding;
 
+                @include media(medium) {
+                    font-size: 36px;
+                    margin-bottom: $simple-padding;
+                }
+
                 .priceCurrency {
                     margin-right: 4px;
+
+                    @include media(medium) {
+                        margin-right: 4px;
+                    }
                 }
             }
 
@@ -94,8 +125,4 @@
     }
 }
 
-@media (max-width: 800px) {
-    .itemDetailContentRight {
-        justify-content: flex-start !important;
-    }
-}
+

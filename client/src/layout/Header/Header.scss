@@ -1,5 +1,6 @@
 @import "../../styles/partials/colors";
 @import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
 
 .header {
     display: flex;
@@ -24,6 +25,10 @@
 
             .logo {
                 height: 39px;
+
+                @include media(medium) {
+                    height: 30px;
+                }
             }
         }
 
@@ -31,6 +36,10 @@
             display: flex;
             flex: 1;
             margin-left: 30px;
+
+            @include media(medium) {
+                margin-left: 15px;
+            }
 
             .input {
                 display: flex;
@@ -43,11 +52,19 @@
                 border-top-left-radius: 3px;
                 border-bottom-left-radius: 3px;
                 padding-left: 10px;
+
+                @include media(medium) {
+                    font-size: 16px;
+                }
             }
 
             .input::placeholder {
                 font-size: 18px;
                 color: $grey;
+
+                @include media(medium) {
+                    font-size: 16px;
+                }
             }
 
             .buttonSubmit {
@@ -76,20 +93,3 @@
     }
 }
 
-@media (max-width: 800px) {
-    .logo {
-        height: 30px !important;
-    }
-
-    .form {
-        margin-left: 15px !important;
-
-        .input {
-            font-size: 16px !important;
-        }
-
-        .input::placeholder {
-            font-size: 16px !important;
-        }
-    }
-}

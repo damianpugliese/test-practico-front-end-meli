@@ -1,5 +1,6 @@
 @import "../../styles/partials/variables";
 @import "../../styles/partials/colors";
+@import "../../styles/partials/mixins";
 
 .itemList {
     display: flex;
@@ -35,6 +36,10 @@
             display: flex;
             flex-direction: column;
             width: 70%;
+
+            @include media(medium) {
+                width: 100%
+            }
 
             .priceContainer {
                 display: flex;
@@ -77,8 +82,3 @@
     border-bottom: 1px solid $light-grey;
 }
 
-@media (max-width: 768px) {
-    .priceAndTitleContainer {
-        width: 100% !important;
-    }
-}

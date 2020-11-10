@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './Error.scss';
+import Card from '../Card/Card';
 
 const Error = ({ msg }) => {
     return (
-        <div className={styles.errorContainer}>
-            <h3 className={styles.errorMessage}>
-                {msg}
-            </h3>
-        </div>
+        <section className={styles.errorContainer}>
+            <Card className={styles.errorCard}>
+                <h1 className={styles.errorTitle}>{msg}</h1>
+            </Card>
+        </section>
     )
 }
 

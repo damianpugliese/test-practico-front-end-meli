@@ -3,12 +3,12 @@
 
 .breadCrumList {
     display: flex;
+    width: 100%;
     align-items: center;
+    max-width: $content-width;
     list-style: none;
     padding-top: $simple-padding;
     padding-bottom: $simple-padding;
-    width: 100%;
-    max-width: 1200px;
     
     .breadCrumItem {
         display: flex;

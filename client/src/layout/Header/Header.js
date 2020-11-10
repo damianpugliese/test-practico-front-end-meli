@@ -33,8 +33,8 @@ const Header = () => {
             <nav className={styles.nav}>
                 <Link to='/'>
                     <picture className={styles.logoContainer}>
-                        <source media="(max-width: 768px)" srcset={logoMobile} className={styles.logoMobile} />
-                        <source media="(min-width: 769px)" srcset={logo} className={styles.logo} />
+                        <source media="(max-width: 768px)" srcSet={logoMobile} className={styles.logoMobile} />
+                        <source media="(min-width: 769px)" srcSet={logo} className={styles.logo} />
                         <img src={logo} size='max' alt='logo' className={styles.logo} />
                     </picture>
                 </Link>
@@ -52,8 +52,8 @@ const Header = () => {
                     />
                     <button type='submit' className={styles.buttonSubmit} aria-label='Buscar'>
                         <picture className={styles.buttonImageContainer}>
-                            <source media="(max-width: 768px)" srcset={buttonImageMobile} className={styles.buttonImageMobile} />
-                            <source media="(min-width: 769px)" srcset={buttonImage} className={styles.buttonImage} />
+                            <source media="(max-width: 768px)" srcSet={buttonImageMobile} className={styles.buttonImageMobile} />
+                            <source media="(min-width: 769px)" srcSet={buttonImage} className={styles.buttonImage} />
                             <img src={buttonImage} size='max' alt='buscar' className={styles.buttonImage} />
                         </picture>
                     </button>

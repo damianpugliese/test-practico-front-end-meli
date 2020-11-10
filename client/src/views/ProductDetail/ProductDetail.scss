@@ -1,18 +1,15 @@
 @import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
 
 .productDetailContainer {
-    display: flex;
-    align-items: center;
+    @include container-full;
     flex-direction: column;
-    width: 100%;
-    flex: 1;
-    padding-left: $simple-padding;
-    padding-right: $simple-padding;
+    align-items: center;
 
     .productDetailCard {
         flex-direction: column;
         margin-bottom: 46px;
-        max-width: 1200px;
+        max-width: $content-width;
     }
 
 }

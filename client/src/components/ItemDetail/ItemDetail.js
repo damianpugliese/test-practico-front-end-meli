@@ -10,7 +10,7 @@ const ItemDetail = ({ item }) => {
             <div className={styles.itemDetailDescription}>
                 <h3 className={styles.itemDetailDescriptionTitle}>
                     Descripción de producto
-                    </h3>
+                </h3>
                 <p className={styles.itemDetailDescriptionParagraph}>
                     {item.description}
                 </p>
@@ -25,7 +25,7 @@ const ItemDetail = ({ item }) => {
                             {`${item.sold_quantity} vendidos`}
                         </span>
                     </p>
-                    <h1 className={styles.itemDatailTitle}>
+                    <h1 className={styles.itemDetailTitle}>
                         {item.title}
                     </h1>
                     <div className={styles.priceContainer}>
