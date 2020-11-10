@@ -79,8 +79,10 @@ El proyecto está dividido en dos carpetas: `client` (ReactJS) y `server` (NodeJ
 ###### Pendientes en frontend:
 
 * Agregar Google Analytics.
-* Implementar test unitarios.
-* Creación de variables de entorno para distintos entornos.
+* Implementar test unitarios (Jest).
+* Creación de variables de entorno para distintos entornos y configiuración de entorno de producción.
+* Agregar ESlint.
+
 
 ### Backend
 
@@ -92,7 +94,8 @@ El proyecto está dividido en dos carpetas: `client` (ReactJS) y `server` (NodeJ
 
 ###### Pendientes en backend:
 * Implementar test unitarios.
-* Creación de variables de entorno para distintos entornos.
+* Creación de variables de entorno para distintos entornos y configiuración de entorno de producción.
+* Agregar ESlint.
 
 ## Sitio Web Heroku
 
