@@ -92,7 +92,7 @@ El proyecto está dividido en dos carpetas: `client` (ReactJS) y `server` (NodeJ
 
 ###### Pendientes en backend:
 * Implementar test unitarios.
-* Creación de variables de entorno para disitntos entornos.
+* Creación de variables de entorno para distintos entornos.
 
 ## Sitio Web Heroku
 
