@@ -39,7 +39,7 @@ Frontend:
 
 Backend:
 - NodeJS
-- ExpressJ
+- ExpressJS
 
 ## Estructura
 El proyecto está dividido en dos carpetas: `client` (ReactJS) y `server` (NodeJS).
