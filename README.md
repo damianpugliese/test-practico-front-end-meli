@@ -4,7 +4,7 @@
 
 ``` bash
 # Instalar dependencias (concurrently) en la carpeta raíz
-npm install (or npm i)
+npm install (o npm i)
 
 # Instalar dependencias en la carpeta server (Express)
 npm run server-install
