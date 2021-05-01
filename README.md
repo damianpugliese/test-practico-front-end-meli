@@ -89,7 +89,7 @@ El proyecto está dividido en dos carpetas: `client` (ReactJS) y `server` (NodeJ
 * Utilziación de caché en el lado del servidor para guardar datos y evitar peticiones recursivas (currencies).
 * Uso de `Async Await` para manejar las respuesta de la API de MercadoLibre.
 * Al hacer petición a la API de MercadoLibre para obtener *thumbnails* de los items en el listado, se reemplaza un valor del nombre del recurso para mostrar una imagen de mejor calidad.
-* Se creó una ruta adicional `/categories/:id` para solicitar las categorias de un producto (para mostrar en el BreadCrumb del detalle de prodcuto) en caso de que la búsqueda de resultados totales no contenga categorias y no puedan pasarse por props al detalle de producto. Con dicho fin también se agregó la propiedad `category_id` al objeto item devuelto por `/items/:id`.
+* Se creó una ruta adicional `/categories/:id` para solicitar las categorias de un producto (para mostrar en el BreadCrumb del detalle de producto) en caso de que la búsqueda de resultados totales no contenga categorias y no puedan pasarse por props al detalle de producto. Con dicho fin también se agregó la propiedad `category_id` al objeto item devuelto por `/items/:id`.
 * Se agregó la propiedad `address` a los items devueltos por `/items?q:query` para poder mostrar la ubicación en la vista `SearchResults`. 
 
 ###### Pendientes en backend:
