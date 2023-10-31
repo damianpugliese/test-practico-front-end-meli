@@ -1,7 +1,5 @@
 > Easyborker job application
 
-## Documentation
-
 ## Instalation
 
 Before getting started, it is highly recommended having [nvm](https://github.com/creationix/nvm) installed to run the service.
@@ -9,7 +7,6 @@ Before getting started, it is highly recommended having [nvm](https://github.com
 1. Clone the project
 
 ```bash
-# with git
 $ git clone git@github.com:damianpugliese/easybroker-job-application.git && cd easybroker-job-application
 ```
 
